@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI Election Assistant - Verify registration, get polling details, and more." />
+    <title>AI Election Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="app-header">
+        <div class="logo-container">
+          <div class="logo-icon">🗳️</div>
+          <h1>Election Assistant</h1>
+        </div>
+        <div class="header-actions">
+           <button id="voice-toggle" class="icon-btn" aria-label="Toggle Voice Assistant" title="Voice Assistant">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+           </button>
+        </div>
+      </header>
+
+      <main class="chat-container">
+        <div id="chat-messages" class="chat-messages">
+          <!-- Messages will be injected here dynamically -->
+        </div>
+
+        <div class="typing-indicator hidden" id="typing-indicator">
+          <span></span><span></span><span></span>
+        </div>
+      </main>
+
+      <footer class="chat-input-area">
+        <div class="input-wrapper">
+          <input type="text" id="user-input" placeholder="Type a message or voter ID..." aria-label="Your message">
+          <button id="attach-btn" class="icon-btn" aria-label="Upload document" title="Upload Voter ID or Aadhaar">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+          </button>
+          <button id="send-btn" class="primary-btn" aria-label="Send message">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+        <input type="file" id="file-upload" class="hidden" accept="image/*,.pdf">
+      </footer>
+    </div>
+    
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
